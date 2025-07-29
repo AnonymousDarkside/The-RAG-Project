@@ -1,0 +1,4 @@
+gfunctions-framework
+google-cloud-storage
+PyMuPDF
+cloudevents
