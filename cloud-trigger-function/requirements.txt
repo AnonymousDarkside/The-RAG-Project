@@ -1,4 +1,6 @@
-gfunctions-framework
+functions-framework
 google-cloud-storage
 PyMuPDF
 cloudevents
+sentence-transformers
+torch

@@ -24,7 +24,6 @@ SEARCH_QUERIES = [
 MAX_RESULTS_PER_QUERY = 50
 
 # --- Script Logic ---
-
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
@@ -42,9 +41,8 @@ for query in SEARCH_QUERIES:
             # Create a clean filename
             # Example: 2106.07447v1-Self-Supervised-Learning-with-SwAV.pdf
             paper_id = result.entry_id.split('/')[-1]
-            # Sanitize title by removing invalid filename characters
             paper_title = re.sub(r'[<>:"/\\|?*]', '', result.title).replace(" ", "-")
-            filename = f"{paper_id}-{paper_title[:50]}.pdf" # Truncate long titles
+            filename = f"{paper_id}-{paper_title[:50]}.pdf"
             filepath = os.path.join(OUTPUT_DIR, filename)
 
             if not os.path.exists(filepath):
